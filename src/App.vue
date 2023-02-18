@@ -11,9 +11,13 @@
   </header>
 
   <main>
-    <router-view>
-    
-    </router-view>
+
+    <div class="container">
+      
+      <router-view></router-view>
+
+    </div>
+
   </main>
 
 </template>
@@ -56,6 +60,12 @@ h1{
   span{
     color: #34d399;
   }
+}
+
+.container{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 </style>
