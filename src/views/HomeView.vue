@@ -1,10 +1,6 @@
 <script setup>
 import {useMovieStore} from '../stores/movie'
-
 const movieStore = useMovieStore();
-
-
-
 
 </script>
 
@@ -15,16 +11,16 @@ const movieStore = useMovieStore();
 
         <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80" alt="movie-image" class="featured-novie-image">
 
-        <div class="movie-detail">
+        <!-- <div class="movie-detail">
           <h3>Superman</h3>
           <p>An alien orphan is sent from his dying planet to Earth, where he grows up to become his adoptive home's first and greatest superhero.</p>
-        </div>
+        </div> -->
       
       </router-link>
     </div>
 
     <form @submit.prevent="movieStore.SarchMovies" class="search-box">
-      <div class="">
+      <div class="search-box-div">
         <input type="text" placeholder="Search movie..." v-model="movieStore.search">
         <input type="submit" value="Search">
       </div>
@@ -32,7 +28,7 @@ const movieStore = useMovieStore();
 
     <div class="movies-list">
       <div class="movie" v-for="movie in movieStore.movies" :key="movie.imdbID">
-        <router-link to="/movie/" class="movie-link">
+        <router-link :to="{name: 'movie-detail', params: {id: movie.imdbID}}" class="movie-link">
         
           <div class="movie-image">
 
@@ -93,28 +89,30 @@ const movieStore = useMovieStore();
 
   }
 
-  .search-box{
+  .search-box-div{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:flex-start;
     align-items: center;
     padding: 16px;
 
     input{
       display: block;
+      max-width: 50%;
       appearance: none;
       border: none;
       background: none;
       outline: none;
+      margin-right: 10px;
 
       &[type = "text"]{
         width: 100%;
+        height: 50px;
         color: white;
         background-color: #496583;
         font-size: 20px;
         padding: 10px 16px;
         border-radius: 8px;
-        margin-bottom: 15px;
         transition: 0.4s;
         
         &::placeholder{
@@ -128,7 +126,8 @@ const movieStore = useMovieStore();
 
       &[type = "submit"]{
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
+        height: 50px;
         background-color: #34d399;
         padding: 16px;
         border-radius: 8px;
@@ -150,8 +149,8 @@ const movieStore = useMovieStore();
     margin: 0px 8px;
 
     .movie{
-      max-width: 50%;
-      flex: 1 1 50%;
+      max-width: 25%;
+      flex: 1 1 25%;
       padding: 16px 8px;
 
       .movie-link{

@@ -62,8 +62,14 @@ h1{
   }
 }
 
+// .container{
+//   max-width: 900px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
 .container{
-  max-width: 900px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
