@@ -77,7 +77,12 @@ onMounted(() => {
 <style lang="scss" scoped>
 
 .movie-detail{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 16px;
+
+    
 
     .title-rating{
         display: flex;
