@@ -18,7 +18,7 @@ export const useMovieStore = defineStore('movie', {
     async SarchMovies(){
 
       if(this.search != ""){
-        const {data} = await axios.get(`http://www.omdbapi.com/?apikey=9e2f4c38&s=${this.search}`);
+        const {data} = await axios.get(`https://www.omdbapi.com/?apikey=9e2f4c38&s=${this.search}`);
 
         console.log(data.Search);
 
@@ -32,7 +32,7 @@ export const useMovieStore = defineStore('movie', {
     async getSingleMovie(id){
 
       if(this.search != ""){
-        const {data} = await axios.get(`http://www.omdbapi.com/?apikey=9e2f4c38&i=${id}&plot=full`);
+        const {data} = await axios.get(`https://www.omdbapi.com/?apikey=9e2f4c38&i=${id}&plot=full`);
 
         console.log(data);
 
