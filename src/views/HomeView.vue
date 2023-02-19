@@ -6,12 +6,11 @@ const movieStore = useMovieStore();
 
 <template>
   <div class="home">
-    <div class="featured-novie-card">
+    <div class="featured-movie-card">
 
         <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80" alt="movie-image" class="featured-novie-image">
 
         <div class="movie-detail">
-          <p>Developed by Md. Nabobi Hasan</p>
         </div>
     </div>
 
@@ -52,13 +51,13 @@ const movieStore = useMovieStore();
 <style lang="scss">
 
 .home{
-  .featured-novie-card{
+  .featured-movie-card{
     position: relative;
 
     .featured-novie-image{
       display: block;
       width: 100%;
-      height: 300px;
+      height: 35vh;
       object-fit: cover;
       position: relative;
       z-index: 0;
@@ -90,7 +89,8 @@ const movieStore = useMovieStore();
     flex-direction: row;
     justify-content:flex-start;
     align-items: center;
-    padding: 16px;
+    padding: 2%;
+    margin: 0px 8px;
 
     input{
       display: block;
@@ -173,7 +173,15 @@ const movieStore = useMovieStore();
 
     .movie{
 
-      @media (min-width:1200px) {
+      @media (min-width:1650px) {
+
+        max-width: 20%;
+        flex: 1 1 20%;
+        padding: 16px 2%;
+
+      }
+
+      @media (min-width:1200px) and (max-width:1649px) {
 
         max-width: 25%;
         flex: 1 1 25%;

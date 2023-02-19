@@ -20,6 +20,12 @@
 
   </main>
 
+  <footer>
+    <div class="footer">
+      <p>Developed by: <span>Md. Nabobi Hasan</span></p>
+    </div>
+  </footer>
+
 </template>
 
 <style lang="scss">
@@ -37,9 +43,15 @@
   }
 }
 
+
 body{
+  position: relative;
+  min-height: 100vh;
   background-color: #4b5563;
+  display: flex;
+  flex-direction: column;
 }
+
 
 a{
   text-decoration: none;
@@ -71,6 +83,26 @@ h1{
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 50px;
+}
+
+.footer{
+  margin-top: auto;
+  position:absolute;
+  bottom:0px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  z-index: 1;
+
+  p{
+    text-align: center;
+    color: white;
+    span{
+      color: #34d399;
+    }
+  }
 }
 
 </style>
