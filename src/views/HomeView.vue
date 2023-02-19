@@ -149,9 +149,9 @@ const movieStore = useMovieStore();
     margin: 0px 8px;
 
     .movie{
-      max-width: 25%;
-      flex: 1 1 25%;
-      padding: 16px 8px;
+      max-width: 33%;
+      flex: 1 1 33%;
+      padding: 16px 2%;
 
       .movie-link{
         display: flex;
