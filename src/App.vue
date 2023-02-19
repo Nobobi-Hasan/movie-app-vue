@@ -92,7 +92,7 @@ h1{
   bottom:0px;
   width: 100%;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 16px;
   z-index: 1;
 

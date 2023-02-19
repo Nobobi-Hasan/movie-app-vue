@@ -174,35 +174,27 @@ const movieStore = useMovieStore();
     .movie{
 
       @media (min-width:1650px) {
-
         max-width: 20%;
         flex: 1 1 20%;
         padding: 16px 2%;
-
       }
 
       @media (min-width:1200px) and (max-width:1649px) {
-
         max-width: 25%;
         flex: 1 1 25%;
         padding: 16px 2%;
-
       }
 
       @media (min-width:768px) and (max-width:1199px) {
-
         max-width: 33%;
         flex: 1 1 33%;
         padding: 16px 2%;
-
       }
 
       @media (max-width:767px) {
-
         max-width: 50%;
         flex: 1 1 50%;
         padding: 16px 2%;
-
       }
 
       
@@ -216,6 +208,7 @@ const movieStore = useMovieStore();
           display: block;
 
           img{
+            border-radius: 8px 8px 0px 0px;
             display: block;
             width: 100%;
             height: 300px;
