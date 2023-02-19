@@ -7,16 +7,12 @@ const movieStore = useMovieStore();
 <template>
   <div class="home">
     <div class="featured-novie-card">
-      <router-link to="/movie/tt0078346">
 
         <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80" alt="movie-image" class="featured-novie-image">
 
-        <!-- <div class="movie-detail">
-          <h3>Superman</h3>
-          <p>An alien orphan is sent from his dying planet to Earth, where he grows up to become his adoptive home's first and greatest superhero.</p>
-        </div> -->
-      
-      </router-link>
+        <div class="movie-detail">
+          <p>Developed by Md. Nabobi Hasan</p>
+        </div>
     </div>
 
     <form @submit.prevent="movieStore.SarchMovies" class="search-box">
@@ -106,11 +102,25 @@ const movieStore = useMovieStore();
       margin-right: 10px;
 
       &[type = "text"]{
+
+        @media (min-width:1200px) {          
+          height: 50px;
+          font-size: 20px;
+        }
+
+        @media (min-width:768px) and (max-width:1199px) {
+          height: 45px;
+          font-size: 18px;
+        }
+
+        @media (max-width:767px) {
+          height: 40px;
+          font-size: 16px;
+        }
+
         width: 100%;
-        height: 50px;
         color: white;
         background-color: #496583;
-        font-size: 20px;
         padding: 10px 16px;
         border-radius: 8px;
         transition: 0.4s;
@@ -127,12 +137,25 @@ const movieStore = useMovieStore();
       &[type = "submit"]{
         width: 100%;
         max-width: 250px;
-        height: 50px;
+
+        @media (min-width:1200px) {          
+          height: 50px;
+          font-size: 20px;
+        }
+
+        @media (min-width:768px) and (max-width:1199px) {
+          height: 45px;
+          font-size: 18px;
+        }
+
+        @media (max-width:767px) {
+          height: 40px;
+          font-size: 16px;
+        }
+        
         background-color: #34d399;
-        padding: 16px;
         border-radius: 8px;
         color: white;
-        font-size: 20px;
         text-transform: uppercase;
         transition: 0.4s;
 
@@ -149,10 +172,32 @@ const movieStore = useMovieStore();
     margin: 0px 8px;
 
     .movie{
-      max-width: 33%;
-      flex: 1 1 33%;
-      padding: 16px 2%;
 
+      @media (min-width:1200px) {
+
+        max-width: 25%;
+        flex: 1 1 25%;
+        padding: 16px 2%;
+
+      }
+
+      @media (min-width:768px) and (max-width:1199px) {
+
+        max-width: 33%;
+        flex: 1 1 33%;
+        padding: 16px 2%;
+
+      }
+
+      @media (max-width:767px) {
+
+        max-width: 50%;
+        flex: 1 1 50%;
+        padding: 16px 2%;
+
+      }
+
+      
       .movie-link{
         display: flex;
         flex-direction: column;

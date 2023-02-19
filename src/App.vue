@@ -6,7 +6,7 @@
 
   <header>
     <routerLink :to="{name: 'home'}">
-      <h1>Movies <span>App</span></h1>
+      <h1>Movie <span>Sc<span class="oo">00</span>pe</span></h1>
     </routerLink>
   </header>
 
@@ -58,15 +58,14 @@ h1{
   color: white;
   font-size: 28px;
   span{
+    font-size: 28px;
     color: #34d399;
+    span{
+      font-size: 34px;
+      color: yellow;
+    }
   }
 }
-
-// .container{
-//   max-width: 900px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
 
 .container{
   max-width: 100%;
